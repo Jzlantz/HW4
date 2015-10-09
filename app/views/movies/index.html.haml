@@ -17,3 +17,14 @@
         %td= link_to "More about #{movie.title}", movie_path(movie)
 
 = link_to 'Add new movie', new_movie_path
+
+%table#users
+  %thead
+    %tr
+      %th User ID
+      %th Email
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.user_id
+        %td= user.email
