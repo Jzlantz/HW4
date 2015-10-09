@@ -23,8 +23,11 @@
     %tr
       %th User ID
       %th Email
+      %th Session Token
   %tbody
     - @users.each do |user|
       %tr
         %td= user.user_id
         %td= user.email
+        %td= user.session_token
+        
