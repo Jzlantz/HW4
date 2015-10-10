@@ -11,14 +11,14 @@
     %h1.title Rotten Potatoes!
     
     - if !@current_user
-      = button_to "Sign Up/Login", login_path, :method => :get
+      = button_to "Sign Up/Login", login_path, :method => :get, :id => 'login'
     - else
-      = button_to "Logout", logout_path, :controller=> "sessions", :action=> "destroy", :method => :delete
+      = button_to "Logout", logout_path, :controller=> "sessions", :action=> "destroy", :method => :delete, :id => 'logout'
     #main
       - if flash[:notice]
-        #notice.message= flash[:notice]
+        #notice.flash_message= flash[:notice]
       - elsif flash[:warning]
-        #warning.message= flash[:warning]
+        #warning.flash_message= flash[:warning]
 
       = yield
 
